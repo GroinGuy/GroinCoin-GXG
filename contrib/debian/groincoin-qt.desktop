@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Groincoin Core
+Comment=Connect to the Groincoin P2P Network
+Comment[de]=Verbinde mit dem Groincoin peer-to-peer Netzwerk
+Comment[fr]=Groincoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Groincoin, eşten eşe kriptografik sanal para birimi
+Exec=groincoin-qt %u
+Terminal=false
+Type=Application
+Icon=groincoin128
+MimeType=x-scheme-handler/groincoin;
+Categories=Office;Finance;
+StartupWMClass=Groincoin-qt

@@ -1,0 +1,25 @@
+# It is not recommended to modify this file in-place, because it will
+# be overwritten during package upgrades. If you want to add further
+# options or overwrite existing ones then use
+# $ systemctl edit groincoind.service
+# See "man systemd.service" for details.
+
+# Note that almost all daemon options could be specified in
+# /etc/groincoin/groincoin.conf
+
+[Unit]
+Description=Groincoin daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/groincoind -daemon -conf=/etc/groincoin/groincoin.conf -pid=/run/groincoind/groincoind.pid
+# Creates /run/groincoind owned by groincoin
+RuntimeDirectory=groincoind
+User=groincoin
+Type=forking
+PIDFile=/run/groincoind/groincoind.pid
+Restart=on-failure
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,33 @@
+# /etc/conf.d/groincoind: config file for /etc/init.d/groincoind
+
+# Config file location
+#GROINCOIND_CONFIGFILE="/etc/groincoin/groincoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $GROINCOIND_USER)
+#GROINCOIND_PIDDIR="/var/run/groincoind"
+
+# What filename to give the pidfile
+#GROINCOIND_PIDFILE="${GROINCOIND_PIDDIR}/groincoind.pid"
+
+# Where to write groincoind data (be mindful that the blockchain is large)
+#GROINCOIND_DATADIR="/var/lib/groincoind"
+
+# User and group to own groincoind process
+#GROINCOIND_USER="groincoin"
+#GROINCOIND_GROUP="groincoin"
+
+# Path to groincoind executable
+#GROINCOIND_BIN="/usr/bin/groincoind"
+
+# Nice value to run groincoind under
+#GROINCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#GROINCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for groincoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+GROINCOIND_SIGTERM_TIMEOUT=60

@@ -1,0 +1,6 @@
+usr/local/bin/groincoin-qt usr/bin
+share/pixmaps/groincoin32.xpm usr/share/pixmaps
+share/pixmaps/groincoin16.xpm usr/share/pixmaps
+share/pixmaps/groincoin128.png usr/share/pixmaps
+debian/groincoin-qt.desktop usr/share/applications
+debian/groincoin-qt.protocol usr/share/kde4/services/

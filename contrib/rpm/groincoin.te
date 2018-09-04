@@ -1,0 +1,81 @@
+policy_module(groincoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type groincoin_t;
+type groincoin_exec_t;
+init_daemon_domain(groincoin_t, groincoin_exec_t)
+
+permissive groincoin_t;
+
+type groincoin_initrc_exec_t;
+init_script_file(groincoin_initrc_exec_t)
+
+type groincoin_conf_t;
+files_type(groincoin_conf_t)
+
+type groincoin_var_lib_t;
+files_type(groincoin_var_lib_t)
+
+type groincoin_var_run_t;
+files_type(groincoin_var_run_t)
+
+type groincoin_port_t;
+corenet_port(groincoin_port_t)
+
+########################################
+#
+# groincoin local policy
+#
+allow groincoin_t self:process { fork };
+
+allow groincoin_t self:fifo_file rw_fifo_file_perms;
+allow groincoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(groincoin_t, groincoin_conf_t, groincoin_conf_t)
+manage_files_pattern(groincoin_t, groincoin_conf_t, groincoin_conf_t)
+
+manage_dirs_pattern(groincoin_t, groincoin_var_lib_t, groincoin_var_lib_t)
+manage_files_pattern(groincoin_t, groincoin_var_lib_t, groincoin_var_lib_t)
+files_var_lib_filetrans(groincoin_t, groincoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(groincoin_t, groincoin_var_run_t, groincoin_var_run_t)
+manage_files_pattern(groincoin_t, groincoin_var_run_t, groincoin_var_run_t)
+
+sysnet_dns_name_resolve(groincoin_t)
+corenet_all_recvfrom_unlabeled(groincoin_t)
+
+allow groincoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(groincoin_t)
+corenet_tcp_sendrecv_generic_node(groincoin_t)
+corenet_tcp_sendrecv_all_ports(groincoin_t)
+corenet_tcp_bind_generic_node(groincoin_t)
+
+gen_require(`
+    type groincoin_port_t;
+')
+allow groincoin_t groincoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type groincoin_port_t;
+')
+allow groincoin_t groincoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(groincoin_t)
+
+files_read_etc_files(groincoin_t)
+
+miscfiles_read_localization(groincoin_t)
+
+sysnet_dns_name_resolve(groincoin_t)
+
+allow groincoin_t groincoin_exec_t:file execute_no_trans;
+allow groincoin_t self:process setsched;
+corecmd_exec_ls(groincoin_t)
+corenet_tcp_connect_http_port(groincoin_t)
+dev_read_urand(groincoin_t)
+fs_getattr_xattr_fs(groincoin_t)
+kernel_read_system_state(groincoin_t)

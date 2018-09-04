@@ -1,0 +1,157 @@
+
+## <summary>policy for groincoin</summary>
+
+
+########################################
+## <summary>
+##	Transition to groincoin.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`groincoin_domtrans',`
+	gen_require(`
+		type groincoin_t, groincoin_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, groincoin_exec_t, groincoin_t)
+')
+
+
+########################################
+## <summary>
+##	Execute groincoin server in the groincoin domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`groincoin_initrc_domtrans',`
+	gen_require(`
+		type groincoin_initrc_exec_t;
+	')
+
+	init_labeled_script_domtrans($1, groincoin_initrc_exec_t)
+')
+
+
+########################################
+## <summary>
+##	Search groincoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`groincoin_search_lib',`
+	gen_require(`
+		type groincoin_var_lib_t;
+	')
+
+	allow $1 groincoin_var_lib_t:dir search_dir_perms;
+	files_search_var_lib($1)
+')
+
+########################################
+## <summary>
+##	Read groincoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`groincoin_read_lib_files',`
+	gen_require(`
+		type groincoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	read_files_pattern($1, groincoin_var_lib_t, groincoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage groincoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`groincoin_manage_lib_files',`
+	gen_require(`
+		type groincoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_files_pattern($1, groincoin_var_lib_t, groincoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage groincoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`groincoin_manage_lib_dirs',`
+	gen_require(`
+		type groincoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_dirs_pattern($1, groincoin_var_lib_t, groincoin_var_lib_t)
+')
+
+
+########################################
+## <summary>
+##	All of the rules required to administrate
+##	a groincoin environment
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+## <rolecap/>
+#
+interface(`groincoin_admin',`
+	gen_require(`
+		type groincoin_t;
+		type groincoin_initrc_exec_t;
+		type groincoin_var_lib_t;
+	')
+
+	allow $1 groincoin_t:process { ptrace signal_perms };
+	ps_process_pattern($1, groincoin_t)
+
+	groincoin_initrc_domtrans($1)
+	domain_system_change_exemption($1)
+	role_transition $2 groincoin_initrc_exec_t system_r;
+	allow $2 system_r;
+
+	files_search_var_lib($1)
+	admin_pattern($1, groincoin_var_lib_t)
+
+')
+
