@@ -76,10 +76,10 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 128000;
         consensus.BIP16Height = 173805; // 
-        consensus.BIP34Height = 600000;
-        consensus.BIP34Hash = uint256();
-        consensus.BIP65Height = 600000; // 
-        consensus.BIP66Height = 600000; // 
+        consensus.BIP34Height = 521150;
+        consensus.BIP34Hash = uint256S("0x00000000000466aa01ef608cb00c221acc14d3cfa17bf02f7b7496667c155b41");
+        consensus.BIP65Height = 550918; // 
+        consensus.BIP66Height = 552016; // 
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 24 * 60 * 60; // 1 Day
         consensus.nPowTargetSpacing = 2.5 * 60;
@@ -98,7 +98,7 @@ public:
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1533081600; // August 1, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1533081600; // August 1, 2018
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1564617600; // August 1, 2019
 
         // The best chain should have at least this much work.
