@@ -1,5 +1,5 @@
 ---
-name: "groincoin-linux-0.16"
+name: "groincoin-linux-1.2.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -28,8 +28,8 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/mendozg/Groincoin.git"
-  "dir": "Groincoin"
+- "url": "https://github.com/GroinGuy/GroinCoin-GXG.git"
+  "dir": "GroinCoin-GXG"
 files: []
 script: |
 
@@ -113,7 +113,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd groincoin
+  cd GroinCoin-GXG
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do

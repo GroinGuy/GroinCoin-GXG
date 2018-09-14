@@ -1,5 +1,5 @@
 ---
-name: "groincoin-osx-0.16"
+name: "groincoin-osx-1.2.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -28,8 +28,8 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/mendozg/Groincoin.git"
-  "dir": "groincoin"
+- "url": "https://github.com/GroinGuy/GroinCoin-GXG.git"
+  "dir": "GroinCoin-GXG"
 files:
 - "MacOSX10.11.sdk.tar.gz"
 script: |
@@ -83,7 +83,7 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd groincoin
+  cd GroinCoin-GXG
   BASEPREFIX=`pwd`/depends
 
   mkdir -p ${BASEPREFIX}/SDKs

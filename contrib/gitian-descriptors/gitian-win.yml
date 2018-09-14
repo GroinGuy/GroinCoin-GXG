@@ -1,5 +1,5 @@
 ---
-name: "groincoin-win-0.16"
+name: "groincoin-win-1.2.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -22,8 +22,8 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/mendozg/Groincoin.git"
-  "dir": "groincoin"
+- "url": "https://github.com/GroinGuy/GroinCoin-GXG.git"
+  "dir": "GroinCoin-GXG"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -101,7 +101,7 @@ script: |
   create_per-host_linker_wrapper "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd groincoin
+  cd GroinCoin-GXG
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
