@@ -30,7 +30,6 @@ QT_TS = \
   qt/locale/groincoin_en_AU.ts \
   qt/locale/groincoin_en_GB.ts \
   qt/locale/groincoin_en.ts \
-  qt/locale/groincoin_en_US.ts \
   qt/locale/groincoin_eo.ts \
   qt/locale/groincoin_es_419.ts \
   qt/locale/groincoin_es_AR.ts \

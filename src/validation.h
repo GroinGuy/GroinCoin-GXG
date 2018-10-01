@@ -18,7 +18,7 @@
 #include <script/script_error.h>
 #include <sync.h>
 #include <versionbits.h>
-
+#include <memory>
 #include <algorithm>
 #include <exception>
 #include <map>
@@ -165,6 +165,7 @@ extern uint64_t nLastBlockWeight;
 extern const std::string strMessageMagic;
 extern CWaitableCriticalSection csBestBlock;
 extern CConditionVariable cvBlockChange;
+extern uint256 hashBestBlock;
 extern std::atomic_bool fImporting;
 extern std::atomic_bool fReindex;
 extern int nScriptCheckThreads;

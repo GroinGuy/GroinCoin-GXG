@@ -68,12 +68,11 @@ protected:
      */
     virtual void TransactionAddedToMempool(const CTransactionRef &ptxn) {}
     /**
-     * Notifies listeners of a transaction leaving mempool.
+     * Notifies listeners when the block chain tip advances.
      *
-     * This only fires for transactions which leave mempool because of expiry,
-     * size limiting, reorg (changes in lock times/coinbase maturity), or
-     * replacement. This does not include any transactions which are included
-     * in BlockConnectedDisconnected either in block->vtx or in txnConflicted.
+     * When multiple blocks are connected at once, UpdatedBlockTip will be called on the final tip
+     * but may not be called on every intermediate tip. If the latter behavior is desired,
+     * subscribe to BlockConnected() instead.
      *
      * Called on a background thread.
      */
@@ -97,12 +96,6 @@ protected:
      * Called on a background thread.
      */
     virtual void SetBestChain(const CBlockLocator &locator) {}
-    /**
-     * Notifies listeners about an inventory item being seen on the network.
-     *
-     * Called on a background thread.
-     */
-    virtual void Inventory(const uint256 &hash) {}
     /** Tells listeners to broadcast their data. */
     virtual void ResendWalletTransactions(int64_t nBestBlockTime, CConnman* connman) {}
     /**
@@ -153,7 +146,6 @@ public:
     void BlockConnected(const std::shared_ptr<const CBlock> &, const CBlockIndex *pindex, const std::shared_ptr<const std::vector<CTransactionRef>> &);
     void BlockDisconnected(const std::shared_ptr<const CBlock> &);
     void SetBestChain(const CBlockLocator &);
-    void Inventory(const uint256 &);
     void Broadcast(int64_t nBestBlockTime, CConnman* connman);
     void BlockChecked(const CBlock&, const CValidationState&);
     void NewPoWValidBlock(const CBlockIndex *, const std::shared_ptr<const CBlock>&);
