@@ -1,6 +1,5 @@
 #ifndef SECP256K1_H
 #define SECP256K1_H
-// Copyright (c) 2014-2018 The Groincoin Core developers
 
 #ifdef __cplusplus
 extern "C" {
