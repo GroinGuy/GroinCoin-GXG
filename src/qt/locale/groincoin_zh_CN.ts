@@ -2309,7 +2309,7 @@
         <translation>这是笔正常的支付。</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
+        <source>The Bitcoin address to send the payment to</source>
         <translation>付款目的地址</translation>
     </message>
     <message>
@@ -2406,7 +2406,7 @@
         <translation>您可以用你的地址对消息/协议进行签名，以证明您可以接收发送到该地址的比特币。注意不要对任何模棱两可或者随机的消息进行签名，以免遭受钓鱼式攻击。请确保消息内容准确的表达了您的真实意愿。</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>用来对消息签名的地址 </translation>
     </message>
     <message>
@@ -2462,7 +2462,7 @@
         <translation>请在下面输入接收者地址、消息（确保换行符、空格符、制表符等完全相同）和签名以验证消息。请仔细核对签名信息，以提防中间人攻击。请注意，这只是证明接收方签名的地址，它不能证明任何交易！</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>消息使用的签名地址</translation>
     </message>
     <message>

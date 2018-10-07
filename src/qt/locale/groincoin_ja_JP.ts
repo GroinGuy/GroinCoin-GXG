@@ -2164,7 +2164,7 @@
         <translation>これは通常の支払です。</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
+        <source>The Bitcoin address to send the payment to</source>
         <translation>支払に送信するビットコインアドレス</translation>
     </message>
     <message>
@@ -2257,7 +2257,7 @@
         <translation>送信されたビットコインを受信できることを証明するために、アドレスのメッセージや同意事項に署名できます。フィッシング攻撃が署名を利用する可能性があるので、署名が曖昧やランダムでないことに注意してください。詳細な明細のみに署名されます。</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>メッセージ署名するためのビットコインアドレス</translation>
     </message>
     <message>
@@ -2313,7 +2313,7 @@
         <translation>以下のメッセージを確認して、受信者のアドレス、メッセージ（タブやすスペースなどを正確にこぴーしてください）、署名を入力してください。中間の攻撃者からのアタックを避けるために、署名されていないメッセージを読まないように注意してください。署名はアドレスと受信を証明することはできますが、送信者の処理を証明できないことに注意してください。</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>メッセージのビットコインアドレスはサインされています</translation>
     </message>
     <message>

@@ -2264,8 +2264,8 @@
         <translation>Đây là một thông thường payment.</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
-        <translation>The Groincoin address để gửi the payment đến</translation>
+        <source>The Bitcoin address to send the payment to</source>
+        <translation>The Bitcoin address để gửi the payment đến</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2357,8 +2357,8 @@
         <translation>Bạn có thể ký/đồng ý với địa chỉ chứng minh bạn có thể receive groincoins đã gửi đến chúng. Cẩn thận không ký bất cứ không rõ hay random, như các cuộc tấn công lừa đảo có thể cố lừa bạn ký tên vào danh tính của bạn.. Chỉ ký các bản tuyên bố hoàn chỉnh mà bạn đồng ý.</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
-        <translation>The Groincoin address để ký với tin nhắn</translation>
+        <source>The Bitcoin address to sign the message with</source>
+        <translation>The Bitcoin address để ký với tin nhắn</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2413,8 +2413,8 @@
         <translation>Nhập vào address người nhận, tin nhắn (chắc rằng bạn copy line breaks, khoảng trống, tabs, etc. chính xác) và signature bên dưới verify tin nhắn. Cẩn thận không đọc nhiều hơn từ signature so với cái được ký trong bản thân tin nhắn, để tránh bị lừa bới man-in-the-middle tấn công. Lưu ý rằng điều này chỉ chứng nhận nhóm những người nhân với address, nó không thể chứng minh bên gửi có bất kỳ transaction!</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
-        <translation>The Groincoin address tin nhắn đã ký với</translation>
+        <source>The Bitcoin address the message was signed with</source>
+        <translation>The Bitcoin address tin nhắn đã ký với</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Groincoin address</source>

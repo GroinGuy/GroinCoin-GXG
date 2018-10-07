@@ -2288,7 +2288,7 @@
         <translation>Això és un pagament normal.</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
+        <source>The Bitcoin address to send the payment to</source>
         <translation>L'adreça Groincoin on enviar el pagament</translation>
     </message>
     <message>
@@ -2381,7 +2381,7 @@
         <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les groincoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>L'adreça Groincoin amb què signar el missatge</translation>
     </message>
     <message>
@@ -2437,7 +2437,7 @@
         <translation>Introduïu l'adreça del receptor, el missatge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per verificar el missatge. Tingueu cura de no llegir més en la signatura del que està al missatge signat, per evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>L'adreça Groincoin amb què va ser signat el missatge</translation>
     </message>
     <message>

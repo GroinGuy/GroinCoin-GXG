@@ -7,7 +7,7 @@ Source: https://github.com/groincoin/groincoin
 Files: *
 Copyright: 2009-2018, Groincoin Core Developers
 License: Expat
-Comment: The Groincoin Core Developers encompasses the current developers listed on groincoin.org,
+Comment: The Bitcoin Core Developers encompasses the current developers listed on groincoin.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*

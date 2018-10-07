@@ -1468,7 +1468,7 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
+        <source>The Bitcoin address to send the payment to</source>
         <translation>Η διεύθυνση Groincoin που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
@@ -1525,7 +1525,7 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>Διεύθυνση Groincoin που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
@@ -1577,7 +1577,7 @@
         <translation>&amp;Επιβεβαίωση Mηνύματος</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>Διεύθυνση Groincoin με την οποία έχει υπογραφεί το μήνυμα</translation>
     </message>
     <message>

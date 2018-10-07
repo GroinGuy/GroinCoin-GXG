@@ -1445,7 +1445,7 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>Groincoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
@@ -1497,7 +1497,7 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>Groincoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>

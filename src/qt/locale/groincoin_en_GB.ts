@@ -2320,8 +2320,8 @@
         <translation>This is a normal payment.</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
-        <translation>The Groincoin address to send the payment to</translation>
+        <source>The Bitcoin address to send the payment to</source>
+        <translation>The Bitcoin address to send the payment to</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2417,8 +2417,8 @@
         <translation>You can sign messages/agreements with your addresses to prove you can receive groincoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
-        <translation>The Groincoin address to sign the message with</translation>
+        <source>The Bitcoin address to sign the message with</source>
+        <translation>The Bitcoin address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2473,8 +2473,8 @@
         <translation>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
-        <translation>The Groincoin address the message was signed with</translation>
+        <source>The Bitcoin address the message was signed with</source>
+        <translation>The Bitcoin address the message was signed with</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Groincoin address</source>

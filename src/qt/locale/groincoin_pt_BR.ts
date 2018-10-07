@@ -2312,7 +2312,7 @@
         <translation>Este é um pagamento normal.</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
+        <source>The Bitcoin address to send the payment to</source>
         <translation>O endereço Groincoin para enviar o pagamento</translation>
     </message>
     <message>
@@ -2409,7 +2409,7 @@
         <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber groincoins enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>O endereço Groincoin que assinará a mensagem</translation>
     </message>
     <message>
@@ -2465,7 +2465,7 @@
         <translation>Coloque o endereço do autor, a mensagem (certifique-se de copiar toda a mensagem, incluindo quebras de linha, espaços, tabulações, etc.) e a assinatura abaixo para verificar a mensagem. Cuidado para não compreender mais da assinatura do que está na mensagem assinada de fato, para evitar ser enganado por um ataque man-in-the-middle. Note que isso somente prova que o signatário recebe com este endereço, não pode provar que é o remetente de nenhuma transação!</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>O endereço Groincoin que foi usado para assinar a mensagem</translation>
     </message>
     <message>

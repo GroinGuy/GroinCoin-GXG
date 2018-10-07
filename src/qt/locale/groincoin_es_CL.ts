@@ -2148,7 +2148,7 @@
         <translation>Este es un pago normal</translation>
     </message>
     <message>
-        <source>The Groincoin address to send the payment to</source>
+        <source>The Bitcoin address to send the payment to</source>
         <translation>Dirección Groincoin a enviar el pago</translation>
     </message>
     <message>
@@ -2229,7 +2229,7 @@
         <translation>&amp;Firmar Mensaje</translation>
     </message>
     <message>
-        <source>The Groincoin address to sign the message with</source>
+        <source>The Bitcoin address to sign the message with</source>
         <translation>Dirección Groincoin con la que firmar el mensaje</translation>
     </message>
     <message>
@@ -2281,7 +2281,7 @@
         <translation>&amp;Firmar Mensaje</translation>
     </message>
     <message>
-        <source>The Groincoin address the message was signed with</source>
+        <source>The Bitcoin address the message was signed with</source>
         <translation>La dirección Groincoin con la que se firmó el mensaje</translation>
     </message>
     <message>
