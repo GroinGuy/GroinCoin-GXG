@@ -3,7 +3,6 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <hash.h>
-#include <hashblock.h>
 #include <utilstrencodings.h>
 #include <test/test_groincoin.h>
 
