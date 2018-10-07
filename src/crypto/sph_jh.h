@@ -1,5 +1,6 @@
 /* $Id: sph_jh.h 216 2010-06-08 09:46:57Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * JH interface. JH is a family of functions which differ by
  * their output size; this implementation defines JH for output
  * sizes 224, 256, 384 and 512 bits.

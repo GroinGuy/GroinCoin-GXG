@@ -1,5 +1,6 @@
 // Taken from https://gist.github.com/arvidsson/7231973
 
+// Copyright (c) 2014-2018 The Groincoin Core developers
 #ifndef GROINCOIN_REVERSE_ITERATOR_H
 #define GROINCOIN_REVERSE_ITERATOR_H
 

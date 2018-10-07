@@ -1,5 +1,6 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'paymentservertests.h'
+// Copyright (c) 2014-2018 The Groincoin Core developers
 **
 **
 ** WARNING! All changes made in this file will be lost!

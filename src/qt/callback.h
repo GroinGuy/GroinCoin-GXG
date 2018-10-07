@@ -1,5 +1,6 @@
 #ifndef GROINCOIN_QT_CALLBACK_H
 #define GROINCOIN_QT_CALLBACK_H
+// Copyright (c) 2014-2018 The Groincoin Core developers
 
 #include <QObject>
 

@@ -1,5 +1,6 @@
 /* $Id: sph_types.h 260 2011-07-21 01:02:38Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * Basic type definitions.
  *
  * This header file defines the generic integer types that will be used

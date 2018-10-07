@@ -1,5 +1,6 @@
 // tinyformat.h
 // Copyright (C) 2011, Chris Foster [chris42f (at) gmail (d0t) com]
+// Copyright (c) 2014-2018 The Groincoin Core developers
 //
 // Boost Software License - Version 1.0
 //

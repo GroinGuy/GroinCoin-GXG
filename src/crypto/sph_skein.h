@@ -1,5 +1,6 @@
 /* $Id: sph_skein.h 253 2011-06-07 18:33:10Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * Skein interface. The Skein specification defines three main
  * functions, called Skein-256, Skein-512 and Skein-1024, which can be
  * further parameterized with an output length. For the SHA-3

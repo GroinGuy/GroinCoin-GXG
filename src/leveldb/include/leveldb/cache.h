@@ -1,5 +1,6 @@
 // Copyright (c) 2011 The LevelDB Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
+// Copyright (c) 2014-2018 The Groincoin Core developers
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 //
 // A Cache is an interface that maps keys to values.  It has internal

@@ -1,5 +1,6 @@
 /* $Id: sph_blake.h 252 2011-06-07 17:55:14Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * BLAKE interface. BLAKE is a family of functions which differ by their
  * output size; this implementation defines BLAKE for output sizes 224,
  * 256, 384 and 512 bits. This implementation conforms to the "third

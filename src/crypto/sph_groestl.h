@@ -1,5 +1,6 @@
 /* $Id: sph_groestl.h 216 2010-06-08 09:46:57Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * Groestl interface. This code implements Groestl with the recommended
  * parameters for SHA-3, with outputs of 224, 256, 384 and 512 bits.
  *

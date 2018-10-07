@@ -1,5 +1,6 @@
 #include <rpc/safemode.h>
 
+// Copyright (c) 2014-2018 The Groincoin Core developers
 #include <rpc/protocol.h>
 #include <util.h>
 #include <warnings.h>

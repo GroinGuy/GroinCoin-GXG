@@ -1,5 +1,6 @@
 #ifndef HASHBLOCK_H
 #define HASHBLOCK_H
+// Copyright (c) 2014-2018 The Groincoin Core developers
 
 #include "uint256.h"
 #include "crypto/sph_blake.h"

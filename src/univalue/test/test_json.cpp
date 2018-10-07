@@ -1,5 +1,6 @@
 // Test program that can be called by the JSON test suite at
 // https://github.com/nst/JSONTestSuite.
+// Copyright (c) 2014-2018 The Groincoin Core developers
 //
 // It reads JSON input from stdin and exits with code 0 if it can be parsed
 // successfully. It also pretty prints the parsed JSON value to stdout.

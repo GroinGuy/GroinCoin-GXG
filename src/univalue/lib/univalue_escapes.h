@@ -1,5 +1,6 @@
 // Automatically generated file. Do not modify.
 #ifndef GROINCOIN_UNIVALUE_UNIVALUE_ESCAPES_H
+// Copyright (c) 2014-2018 The Groincoin Core developers
 #define GROINCOIN_UNIVALUE_UNIVALUE_ESCAPES_H
 static const char *escapes[256] = {
 	"\\u0000",

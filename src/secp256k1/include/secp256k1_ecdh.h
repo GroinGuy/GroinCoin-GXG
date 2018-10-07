@@ -1,5 +1,6 @@
 #ifndef SECP256K1_ECDH_H
 #define SECP256K1_ECDH_H
+// Copyright (c) 2014-2018 The Groincoin Core developers
 
 #include "secp256k1.h"
 

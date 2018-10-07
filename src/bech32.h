@@ -1,5 +1,6 @@
 // Copyright (c) 2017 Pieter Wuille
 // Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2014-2018 The Groincoin Core developers
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 // Bech32 is a string encoding format used in newer address types.

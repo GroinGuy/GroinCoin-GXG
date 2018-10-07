@@ -1,5 +1,6 @@
 /* $Id: sph_shavite.h 208 2010-06-02 20:33:00Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * SHAvite-3 interface. This code implements SHAvite-3 with the
  * recommended parameters for SHA-3, with outputs of 224, 256, 384 and
  * 512 bits. In the following, we call the function "SHAvite" (without

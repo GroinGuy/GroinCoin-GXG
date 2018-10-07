@@ -1,5 +1,6 @@
 #include <qt/test/wallettests.h>
 
+// Copyright (c) 2014-2018 The Groincoin Core developers
 #include <qt/groincoinamountfield.h>
 #include <qt/callback.h>
 #include <qt/optionsmodel.h>

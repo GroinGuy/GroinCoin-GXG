@@ -1,5 +1,6 @@
 #include <fs.h>
 
+// Copyright (c) 2014-2018 The Groincoin Core developers
 namespace fsbridge {
 
 FILE *fopen(const fs::path& p, const char *mode)

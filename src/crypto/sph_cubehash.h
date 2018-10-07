@@ -1,5 +1,6 @@
 /* $Id: sph_cubehash.h 180 2010-05-08 02:29:25Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * CubeHash interface. CubeHash is a family of functions which differ by
  * their output size; this implementation defines CubeHash for output
  * sizes 224, 256, 384 and 512 bits, with the "standard parameters"

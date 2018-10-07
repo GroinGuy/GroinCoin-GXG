@@ -1,5 +1,6 @@
 #include <boost/test/unit_test.hpp>
 
+// Copyright (c) 2014-2018 The Groincoin Core developers
 #include "stdlib.h"
 
 #include "rpc/blockchain.cpp"

@@ -1,5 +1,6 @@
 /* $Id: sph_simd.h 154 2010-04-26 17:00:24Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * SIMD interface. SIMD is a family of functions which differ by
  * their output size; this implementation defines SIMD for output
  * sizes 224, 256, 384 and 512 bits.

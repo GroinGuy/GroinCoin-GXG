@@ -1,5 +1,6 @@
 /* $Id: sph_echo.h 216 2010-06-08 09:46:57Z tp $ */
 /**
+// Copyright (c) 2014-2018 The Groincoin Core developers
  * ECHO interface. ECHO is a family of functions which differ by
  * their output size; this implementation defines ECHO for output
  * sizes 224, 256, 384 and 512 bits.

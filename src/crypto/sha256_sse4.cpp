@@ -1,5 +1,6 @@
 // Copyright (c) 2017 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2014-2018 The Groincoin Core developers
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
 // This is a translation to GCC extended asm syntax from YASM code by Intel
