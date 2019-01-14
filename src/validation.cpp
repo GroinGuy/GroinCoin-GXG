@@ -3162,10 +3162,10 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
 		 double n2 = ConvertBitsToDouble(nBitsNext);
 		 
 		 if (nHeight <= 40000) {
-			if (abs(n1-n2) > n1*0.2) 
+			if (std::abs(n1-n2) > n1*0.2) 
 				return state.DoS(100, false, REJECT_INVALID, "bad-diffbits", false, "incorrect proof of work");
 			}else{
-				if (abs(n1-n2) > n1*0.005)
+				if (std::abs(n1-n2) > n1*0.005)
 					return state.DoS(100, false, REJECT_INVALID, "bad-diffbits", false, "incorrect proof of work");
 			}
 		 } else {
