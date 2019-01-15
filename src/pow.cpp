@@ -311,6 +311,17 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
+    assert(pindexLast != nullptr);
+
+    if (params.fPowNoRetargeting)
+        return pindexLast->nBits;
+
+    int nHeight = pindexLast->nHeight + 1;
+
+    // Easy difficulty for reward generation block so generate can mine it
+    if (nHeight == params.nReplacementFunds)
+        return UintToArith256(params.powLimit).GetCompact();
+
     // Most recent algo first
     if (pindexLast->nHeight + 1 >= 6950) {
         return DarkGravityWave3(pindexLast, pblock, params);

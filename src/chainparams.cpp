@@ -11,6 +11,7 @@
 #include <tinyformat.h>
 #include <util.h>
 #include <utilstrencodings.h>
+#include <base58.h>
 
 #include <assert.h>
 #include <memory>
@@ -87,6 +88,7 @@ public:
         consensus.nPowTargetTimespan = 24 * 60 * 60; // 1 Day
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.checkpointPubKey = "04ae619e02243e12ed7820f7c61f2063b6ac7b7bf75ea74db16e5754abd31c46330d05386b3f533ac6bcfda89067f893434a6cc6d53ebd8b79ba6b025697523e34";
+        consensus.nReplacementFunds = 581860;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -184,6 +186,7 @@ public:
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 10 * 60;
         consensus.checkpointPubKey = "04521c9c3f167bd6c5929cff49b75563863e80a8637fbc5ac2e8c705abd1d047da100d285fe25bbf40134f950842819ba2bf14f94b5ab95443f0356a57b25b2721";
+        consensus.nReplacementFunds = 100;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -274,6 +277,7 @@ public:
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 10 * 60;
         consensus.checkpointPubKey = "04521c9c3f167bd6c5929cff49b75563863e80a8637fbc5ac2e8c705abd1d047da100d285fe25bbf40134f950842819ba2bf14f94b5ab95443f0356a57b25b2721";
+        consensus.nReplacementFunds = 100;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
@@ -362,4 +366,19 @@ void SelectParams(const std::string& network)
 void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
 {
     globalChainParams->UpdateVersionBitsParameters(d, nStartTime, nTimeout);
+}
+
+CScript CChainParams::GetRewardScriptAtHeight(int nHeight) const {
+    assert(nHeight == consensus.nReplacementFunds);
+
+    CTxDestination destination;
+    if (Params().NetworkIDString() == CBaseChainParams::MAIN)
+        destination = DecodeDestination("GcziN226rVksTDh7Po7WBtZgkkjmDHeFF4");
+    else if (Params().NetworkIDString() == CBaseChainParams::TESTNET)
+        destination = DecodeDestination("myfXQQAmB7kCX6c12ePeqsPQgjopXbhsHb");
+    else if (Params().NetworkIDString() == CBaseChainParams::REGTEST)
+        destination = DecodeDestination("mpARcjXgWPrPhNX5QTYa8vW2FQHQf6WV6d");
+
+    assert(IsValidDestination(destination));
+    return GetScriptForDestination(destination);
 }
