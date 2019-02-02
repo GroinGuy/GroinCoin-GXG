@@ -1165,10 +1165,14 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     }
     else
     {
+        nSubsidy = 64 * COIN;
+
         // Total coins should be 512m, this sets reward to halve every 1.375m after fork to reach total amount
         halvings = (nHeight - Params().GetConsensus().nReplacementFunds) / 1375000;
+
+        nSubsidy >>= halvings;
     }
-    
+
     return nSubsidy;
 }
 
@@ -1997,8 +2001,18 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     LogPrint(BCLog::BENCH, "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs (%.2fms/blk)]\n", (unsigned)block.vtx.size(), MILLI * (nTime3 - nTime2), MILLI * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : MILLI * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * MICRO, nTimeConnect * MILLI / nBlocksTotal);
 
     CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight-1, chainparams.GetConsensus());
-    if (pindex->nHeight == chainparams.GetConsensus().nReplacementFunds)
+    if (pindex->nHeight < chainparams.GetConsensus().nReplacementFunds)
+    {
+        blockReward = nFees + GetBlockSubsidy(pindex->nHeight-1, chainparams.GetConsensus());
+    }
+    else if (pindex->nHeight == chainparams.GetConsensus().nReplacementFunds)
+    {
         blockReward = nFees + GetBlockSubsidy(pindex->nHeight-1, chainparams.GetConsensus()) + GetSubsidy(pindex->nHeight);
+    }
+    else
+    {
+        blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+    }
 
     if (block.vtx[0]->GetValueOut() > blockReward)
         return state.DoS(100,
